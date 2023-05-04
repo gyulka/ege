@@ -7,4 +7,4 @@ def f(s, m):
     if m == 0:
         return 0
     h = [f(s + 1, m - 1), f(s + 4, m - 1), f(s * 3, m - 1)]  # описываются все ходы
-    return any(h) if m % 2 == 0 else all(h)
+    return any(h) if (m-1) % 2 == 0 else all(h)
